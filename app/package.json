@@ -1,0 +1,10 @@
+{
+  "name": "VOCit",
+  "main": "index.html",
+  "window": {
+	"width": 1200,
+    "height": 920,
+    "toolbar": true,
+    "frame": true
+  }
+}

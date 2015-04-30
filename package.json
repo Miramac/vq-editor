@@ -1,0 +1,37 @@
+{
+  "name": "vq-editor",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "vq-editor": "bin/run.cmd"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nw ./app",
+    "build": "browserify ./lib/client/index.js -o ./app/bundel.js && nw ./app",
+    "watch": "watchify ./lib/client/index.js -o ./app/bundel.js -v ",
+    "start-dev": "npm run build | npm run watch "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.2",
+    "brace": "^0.5.0",
+    "jquery": "^2.1.3",
+    "nw": "^0.12.1",
+    "react": "^0.12.2",
+    "reactify": "^1.0.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify"
+      ]
+    ]
+  },
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "watchify": "^3.1.1"
+  }
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>VOCit</title>
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.css" media="all" rel="stylesheet" />
+        <link href="../node_modules/bootstrap/dist/css/bootstrap-theme.css" media="all" rel="stylesheet" />
+        <link href="css/layout.css" media="all" rel="stylesheet" />
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img class="navbar-brand-centered" src="./img/brand_small.png" alt="VOCit">
+                </div>
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">New Widget</a></li>
+                                <li><a href="#">App-Settings</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            <div class="row">
+            
+                <div class="col-md-8">
+                    <div class="row marg-bot">
+                        <div class="col-md-12">
+                            <div class="editor-module modul">
+                                <nav class="navbar navbar-default nav-editor">
+                                    <ul class="nav navbar-nav editor-nav">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-file" aria-hidden="true"></span><span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>  Open</a></li>
+                                                <li><a href="#"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>  Save</a></li>
+                                                <li><a href="#"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>  Save as</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" class="save-button"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </a></li>
+                                        <li class="undo-button-li"><a href="#" class="undo-button"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a></li>
+                                        <li><a href="#" class="redo-button"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> </a></li>
+                                        <li class="check-button-li"><a href="#" class="check-button"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> </a></li>
+                                        <li><a href="#" class="run-button"><span class="glyphicon glyphicon-expand" aria-hidden="true"></span> </a></li>
+                                        <li class="dropdown pull-right">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Share via Mail</a></li>
+                                                <li><a href="#"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Create new Function</a></li>
+                                            </ul>
+                                        </li>
+                                        
+                                    </ul>
+                                </nav>
+                                <div class="with-nav-tabs panel-default">
+                                    <div class="panel-heading">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab">Tab 1</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">Tab 2</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">Tab 3</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="tab1">
+                                                <div id="tab1-editor" class="editor">
+for(var i = 0; i<10;i++){
+    console.log(i);
+}
+
+var i =0;
+setInterval(function() {
+    console.log(++i);
+},500);
+</div>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab2">
+                                                <div id="tab2-editor" class="editor"></div>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab3">
+                                                <div id="tab3-editor" class="editor"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="with-nav-tabs panel-default modul console">
+                                <div class="panel-heading">
+                                    <ul class="nav nav-tabs">
+                                        <li class="console-tab-head active"><a href="#results" class="result-tab-button" data-toggle="tab">Results <span class="badge"></span></a></li>
+                                        <li class="console-tab-head"><a href="#errors" class="error-tab-button" data-toggle="tab">Errors <span class="badge"></span></a></li>
+                                        <li class="console-tab-head"><a href="#log" class="log-tab-button" data-toggle="tab">Log <span class="badge"></span></a></li>
+                                        <ul class="nav navbar-right">
+                                            <li><a href="#" class="clear-button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </a></li>
+                                        </ul>
+                                    </ul>
+                                    
+                                </div>
+                                <div class="panel-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade in active console-tab" id="results">
+                                            <div class="result-tab overflow">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade console-tab" id="errors">
+                                            <div class="error-tab overflow">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade console-tab" id="log">
+                                            <div class="log-tab overflow">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="row marg-bot">
+                        <div class="col-md-12">
+                            <div class="with-nav-tabs panel-default apibrowser modul overflow">
+                                <div class="panel-heading">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#project" data-toggle="tab">Project</a></li>
+                                        <li><a href="#functionbrowser" data-toggle="tab">Functionbrowser</a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade in active" id="project">
+                                            <div class="project-tab">
+                                                <ul id="tree">
+                                                    <li><a href="#">Project 1</a>
+                                                        <ul>
+                                                            <li><a href="#">So cool</a></li>
+                                                            <li><a href="#">Stuff</a>
+                                                                <ul>
+                                                                    <li><a href="#">Dem Files</a>
+                                                                        <ul>
+                                                                            <li><a href="#">File1</a></li>
+                                                                            <li><a href="#">File2</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li><a href="#">Wow</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="#">That Treeview</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Project 2</a>
+                                                        <ul>
+                                                            <li><a href="#">Wow</a></li>
+                                                            <li><a href="#">Cool Folder</a>
+                                                                <ul>
+                                                                    <li><a href="#">Such Files</a>
+                                                                        <ul>
+                                                                            <li><a href="#">File1</a></li>
+                                                                            <li><a href="#">File2</a></li>
+                                                                            <li><a href="#">File3</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li><a href="#">Amaze</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="#">Yay</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="functionbrowser">
+                                            Functionbrowser
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="with-nav-tabs panel-default modul">
+                                <div class="panel-heading">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#notes" data-toggle="tab">Notes</a></li>
+                                        <li><a href="#todo" data-toggle="tab">ToDo</a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade in active" id="notes">
+                                            Notes
+                                        </div>
+                                        <div class="tab-pane fade" id="todo">
+                                            ToDo
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        
+        <div class="templates">
+            <div class="result-line row">
+                <div class="col-sm-12 result-line-header">
+                    <div class="col-sm-1">
+                        <a href="#"><span class="expand-button glyphicon glyphicon-triangle-right" aria-hidden="true"></a>
+                    </div>
+                    <div class="col-sm-10 result-line-header-text"><pre></pre></div>
+                    <div class="col-sm-1 pull-right">
+                        <a href="#"><span class="console-close-button glyphicon glyphicon-remove-circle" aria-hidden="true"></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 result-line-content">
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-10 result-line-content-text"><pre></pre></div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="error-line row">
+                <div class="col-sm-12 error-line-header bg-danger">
+                    <div class="col-sm-1">
+                        <a href="#"><span class="expand-button glyphicon glyphicon-triangle-right" aria-hidden="true"></a>
+                    </div>
+                    <div class="col-sm-10 error-line-header-text"><pre></pre></div>
+                    <div class="col-sm-1 pull-right">
+                        <a href="#"><span class="console-close-button glyphicon glyphicon-remove-circle" aria-hidden="true"></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 error-line-content">
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-10 error-line-content-text"><pre></pre></div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="bundel.js"></script>
+        
+        <script>
+        
+           Exec = require('../lib/node/exec');
+            
+            var global = global || window;
+            var editor = new global.Editor( 'tab1-editor' );
+             
+            var $ = global.jQuery;
+            
+            $( '.undo-button' ).addClass( 'disabled' ).click(function() {
+                editor.undo();
+            });
+            $( '.redo-button' ).addClass( 'disabled' ).click(function() {
+                editor.redo();
+            });
+            
+            editor.on('change', function() {
+                if (editor.getSession().getUndoManager().hasRedo()) {
+                    $( '.redo-button' ).removeClass( 'disabled' );
+                } else {
+                    $( '.redo-button' ).addClass( 'disabled' );
+                }
+                
+                if (editor.getSession().getUndoManager().hasUndo()) {
+                    $( '.undo-button' ).removeClass( 'disabled' );
+                } else {
+                    $( '.undo-button' ).addClass( 'disabled' );
+                }
+            });
+            
+            function createRunEvent() {
+                $( '.run-button' ).click(function() {
+                    $( '.console-tab-head > a > span' ).text('');
+                    $( '.run-button' ).unbind("click");
+                    $( '.run-button' ).removeClass( 'run-button' ).addClass( 'm-progress' );
+                   
+                    Exec(editor, createResult , createError, function(err, childProcess) {
+                        if(childProcess) {
+                            $( '.m-progress' ).click(function () {
+                                console.log("progress");
+                                childProcess.kill('SIGTERM');
+                            });
+                            return;
+                        }
+                        $( '.m-progress' ).removeClass( 'm-progress' ).addClass( 'run-button' );
+                        createRunEvent();
+                        resultFirstLine = 1;
+                    });
+                    
+                    
+                });
+            }
+            createRunEvent();
+            
+            var activeResult;
+            var resultFirstLine = 1;
+            
+            function createResult(output) {
+                if (resultFirstLine == 1 && output != '!resultDone!' && output != '!errorDone!') {
+                    activeResult = $( '.templates .result-line' ).clone().appendTo( '.result-tab' );
+                    $( '.result-line-header-text pre', activeResult).text(output);
+                    $( '.expand-button', activeResult ).click(function() {
+                        if ($( this ).hasClass( 'glyphicon-triangle-right' )) {
+                            $( this ).removeClass( 'glyphicon-triangle-right' ).addClass( 'glyphicon-triangle-bottom' );
+                        } else {
+                            $( this ).removeClass('glyphicon-triangle-bottom').addClass( 'glyphicon-triangle-right' );
+                        }
+                        $( this ).closest( '.result-line' ).children( '.result-line-content' ).slideToggle('fast');
+                    });
+                    $( '.console-close-button', activeResult ).click(function() {
+                        $( this ).parents( '.result-line' ).remove();
+                        $( '.console-tab-head.active > a > span' ).text($( '.console-tab.active > div' ).children().toArray().length);
+                    });
+                    resultFirstLine = 0;
+                } else if(output != '!errorDone!') {
+                    $( '.result-line-content-text pre', activeResult ).text($( '.result-line-content-text pre', activeResult ).text() + output);
+                }
+                $( '.result-tab' ).scrollTop($( '.result-tab' )[0].scrollHeight);
+            }
+            
+            var activeError;
+            function createError(output) {
+                activeError = $( '.templates .error-line' ).clone().appendTo( '.error-tab' );
+                $( '.error-line-header-text pre', activeError).text(output.split('\n')[3]);
+                $( '.expand-button', activeError ).click(function() {
+                    if ($( this ).hasClass( 'glyphicon-triangle-right' )) {
+                        $( this ).removeClass( 'glyphicon-triangle-right' ).addClass( 'glyphicon-triangle-bottom' );
+                    } else {
+                        $( this ).removeClass( 'glyphicon-triangle-bottom' ).addClass( 'glyphicon-triangle-right' );
+                    }
+                    $( this ).closest( '.error-line' ).children( '.error-line-content' ).slideToggle('fast');
+                });
+                $( '.console-close-button', activeError ).click(function() {
+                    $( this ).parents( '.error-line' ).remove();
+                    $( '.console-tab-head.active > a > span' ).text($( '.console-tab.active > div' ).children().toArray().length);
+                });
+                $( '.error-line-content-text pre', activeError ).text($( '.error-line-content-text pre', activeError ).text() + output);
+                $( '.error-tab' ).scrollTop($( '.error-tab' )[0].scrollHeight);
+            }
+            
+        </script>
+    </body>
+    
+</html>

@@ -1,0 +1,1 @@
+"%~dp0..\node_modules\.bin\nw" "%~dp0..\app\."
