@@ -17,6 +17,93 @@ pre {
     display: none;
 }
 
+.modul {
+    border: 2px solid #ccc;
+    min-height: 290px;
+}
+
+.marg-bot {
+    margin-bottom: 10px;
+}
+
+a:focus {
+    color: #aaa;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.btn-default {
+    background-image: none;
+    color: #888;
+    background-color: #f5f5f5;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus  {
+    outline: thin dotted;
+    outline: 5px auto #888;
+    outline-offset: -2px;
+}
+
+.modal {
+    top:30%;
+    outline: none;
+}
+
+.modal-content {
+    border: 2px solid #ccc;
+    border-radius: 0px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+}
+
+.modal-header {
+    background-color: #f5f5f5;
+    padding: 5px;
+    border-top-left-radius: 4px;
+}
+
+.modal-body {
+    padding: 5px;
+}
+
+.modal-footer {
+    padding: 5px;
+}
+
+.popover {
+    min-width: 190px;
+    border-radius: 4px;
+}
+
+.popover-content {
+    border-bottom: 1px solid #ccc;
+}
+
+.popover-buttons {
+    padding-top: 4px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 4px;
+}
+
+.cancel-popover {
+    display: hide;
+}
+
+.tooltip-arrow {
+    border-top-color: #888 !important;
+}
+
+.tooltip-inner {
+  border-radius: 4px;
+  border: 0px solid #888;
+  color: #fff;
+  background-color: #888;
+}
+
+/* LOGO */ 
+/* ===============================================================  */
 .navbar-brand-centered {
     position: absolute;
     left: 50%;
@@ -29,7 +116,222 @@ pre {
 .navbar>.container-fluid .navbar-brand-centered {
     margin-left: -80px;
 }
+/* ===============================================================  */
 
+
+/* EDITOR */
+/* ===============================================================  */
+
+div.editor {
+    width: 100%;
+    min-height: 441px;
+}
+
+.nav-editor {
+    margin: 0;
+    height: 30px;
+    min-height: 20px;
+    border-radius: 0;
+    border: 0;
+    box-shadow: 0 0px 0 rgba(255, 255, 255, 0.15) inset, 0 0px 075px rgba(0, 0, 0, 0.075);
+    background-color: #000;
+}
+
+.editor-module {
+    height: 500px;
+}
+
+.editor-nav {
+    margin: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
+  color: #888;
+}
+
+.editor-module .navbar-nav > li > a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #888;
+}
+
+.editor-module .navbar-nav > li > a.disabled {
+    cursor: initial !important;
+}
+
+.editor-module .navbar-nav > li:hover {
+    background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
+    background-repeat: repeat-x;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.075) inset;
+}
+
+.editor-module .navbar-nav > .li-disabled {
+    cursor: initial !important;
+}
+
+.editor-module .navbar-nav > .li-disabled:hover {
+    background: 0 !important;
+    background-repeat: 0 !important;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset;
+    cursor: initial !important;
+}
+
+.editor-module .panel-heading  {
+    background-image: 0;
+    background-color: #f5f5f5;
+}
+
+.disabled span {
+    color: #aaa;
+}
+
+.undo-button-li {
+    margin-left: 30px;
+}
+
+.check-button-li {
+    margin-left: 30px;
+}
+
+.panel-heading {
+    border-bottom: 0px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 0;
+}
+
+.panel-body {
+    padding: 0;
+}
+
+.panel.with-nav-tabs .panel-heading{
+    padding: 5px 5px 0 5px;
+}
+
+.panel.with-nav-tabs .nav-tabs{
+	border-bottom: none;
+}
+
+.nav-tabs {
+    padding-left: 39px;
+}
+
+.nav-tabs > li > a {
+    border-radius: 0;
+    height: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0;
+}
+
+.nav-tabs > li > a:hover {
+    background-color: #888;
+}
+
+.nav-tabs > .nav > li > a  {
+    padding-top: 3px;
+    padding-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 1px;
+    color: #888;
+}
+
+.nav-tabs > .nav > li > a:hover  {
+    background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
+    background-repeat: repeat-x;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.075) inset;   
+}
+
+.nav-tabs > .navbar-right {
+    margin-right: 10px;
+}
+
+.panel.with-nav-tabs .nav-justified{
+	margin-bottom: -1px;
+}
+
+.with-nav-tabs.panel-default .nav-tabs > li > a,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+    color: #888;
+}
+
+.with-nav-tabs.panel-default .nav-tabs > .open > a,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+    color: #888;
+	background-color: #ddd;
+	border-color: transparent;
+}
+
+.with-nav-tabs.panel-default .nav-tabs > li.active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
+	color: #888;
+	background-color: #fff;
+	border-color: #ddd;
+	border-bottom-color: transparent;
+}
+
+.m-progress:hover,
+.m-progress:active,
+.m-progress:focus {
+    color: transparent;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.m-progress:before {
+    content: '';
+    
+    display: inline-block;
+    
+    position: absolute;
+    background: transparent;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    
+    box-sizing: border-box;
+    
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+    
+    width: 20px;
+    height: 20px;
+    
+    -webkit-animation: ld 1s ease-in-out infinite;
+    -moz-animation:    ld 1s ease-in-out infinite;
+    -o-animation:      ld 1s ease-in-out infinite;
+    animation:         ld 1s ease-in-out infinite;
+    
+    border-left-color: #888;
+    border-right-color: #888;
+}
+
+.m-progress {
+    position: relative;
+    opacity: 1;
+    color: transparent !important;
+    text-shadow: none !important;
+}
+/* ===============================================================  */
+
+
+/* CONSOLE */
+/* ===============================================================  */
 .result-tab, .error-tab, .log-tab {
     max-height: 257px
 }
@@ -93,155 +395,15 @@ pre {
     display: none;
     background-color: #fff;
 }
+/* ===============================================================  */
 
-div.editor {
-    width: 100%;
-    min-height: 441px;
-}
 
-.modul {
-    border: 2px solid #ccc;
-    min-height: 290px;
-
-}
+/* API-BROWSER */
+/* ===============================================================  */
 
 .apibrowser {
     min-height: 500px;
     max-height: 500px;
-}
-
-.marg-bot {
-    margin-bottom: 10px;
-}
-
-.nav-editor {
-    margin: 0;
-    height: 30px;
-    min-height: 20px;
-    border-radius: 0;
-    border: 0;
-    box-shadow: 0 0px 0 rgba(255, 255, 255, 0.15) inset, 0 0px 075px rgba(0, 0, 0, 0.075);
-    background-color: #000;
-}
-
-.disabled span {
-    color: #aaa;
-}
-
-.editor-module {
-    height: 500px;
-}
-
-.editor-module .navbar-nav > li > a {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #888;
-}
-
-.editor-module .navbar-nav > li:hover {
-    background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
-    background-repeat: repeat-x;
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.075) inset;
-}
-
-.editor-module .panel-heading  {
-    background-image: 0;
-    background-color: #f5f5f5;
-}
-
-.editor-nav {
-    margin: 0;
-    width: 100%;
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #ccc;
-}
-
-.undo-button-li {
-    margin-left: 30px;
-}
-
-.check-button-li {
-    margin-left: 30px;
-}
-
-.panel-heading {
-    border-bottom: 0px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    padding: 0;
-}
-
-.panel-body {
-    padding: 0;
-}
-
-.panel.with-nav-tabs .panel-heading{
-    padding: 5px 5px 0 5px;
-}
-
-.panel.with-nav-tabs .nav-tabs{
-	border-bottom: none;
-}
-
-.nav-tabs {
-    padding-left: 39px;
-}
-
-.nav-tabs > li > a {
-    border-radius: 0;
-    height: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 0;
-}
-
-.nav-tabs > li > a:hover {
-    background-color: #888;
-}
-
-.nav-tabs > .nav > li > a  {
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 1px;
-    color: #888;
-    border: 1px solid #ccc;
-}
-
-.nav-tabs > .navbar-right {
-    margin-right: 10px;
-}
-
-.panel.with-nav-tabs .nav-justified{
-	margin-bottom: -1px;
-}
-
-.with-nav-tabs.panel-default .nav-tabs > li > a,
-.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
-.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
-    color: #888;
-}
-
-.with-nav-tabs.panel-default .nav-tabs > .open > a,
-.with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
-.with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
-.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
-.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
-    color: #888;
-	background-color: #ddd;
-	border-color: transparent;
-}
-
-.with-nav-tabs.panel-default .nav-tabs > li.active > a,
-.with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
-.with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
-	color: #888;
-	background-color: #fff;
-	border-color: #ddd;
-	border-bottom-color: transparent;
 }
 
 .tree, .tree ul {
@@ -341,50 +503,5 @@ div.editor {
   50%  { transform: rotate(180deg) scale(1.1); }
   100% { transform: rotate(360deg) scale(1); }
 }
+/* ===============================================================  */
 
-.m-progress {
-    position: relative;
-    opacity: .8;
-    color: transparent !important;
-    text-shadow: none !important;
-}
-
-.m-progress:hover,
-.m-progress:active,
-.m-progress:focus {
-    cursor: default;
-    color: transparent;
-    outline: none !important;
-    box-shadow: none;
-}
-
-.m-progress:before {
-    content: '';
-    
-    display: inline-block;
-    
-    position: absolute;
-    background: transparent;
-    border: 2px solid #fff;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    
-    box-sizing: border-box;
-    
-    top: 50%;
-    left: 50%;
-    margin-top: -10px;
-    margin-left: -10px;
-    
-    width: 20px;
-    height: 20px;
-    
-    -webkit-animation: ld 1s ease-in-out infinite;
-    -moz-animation:    ld 1s ease-in-out infinite;
-    -o-animation:      ld 1s ease-in-out infinite;
-    animation:         ld 1s ease-in-out infinite;
-    
-    border-left-color: #333333;
-    border-right-color: #333333;
-}

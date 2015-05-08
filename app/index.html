@@ -48,11 +48,24 @@
                                                 <li><a href="#"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>  Save as</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#" class="save-button"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </a></li>
-                                        <li class="undo-button-li"><a href="#" class="undo-button"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a></li>
-                                        <li><a href="#" class="redo-button"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> </a></li>
-                                        <li class="check-button-li"><a href="#" class="check-button"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> </a></li>
-                                        <li><a href="#" class="run-button"><span class="glyphicon glyphicon-expand" aria-hidden="true"></span> </a></li>
+                                        <li><a href="#" class="save-button" data-toggle="tooltip" data-placement="top" data-original-title="Save"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </a></li>
+                                        <li class="undo-button-li" data-toggle="tooltip" data-placement="top" data-original-title="Undo"><a href="#" class="undo-button"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a></li>
+                                        <li class="redo-button-li" data-toggle="tooltip" data-placement="top" data-original-title="Redo"><a href="#" class="redo-button"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> </a></li>
+                                        <li class="check-button-li" data-toggle="tooltip" data-placement="top" data-original-title="Check code"><a href="#" class="check-button"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> </a></li>
+                                        <li>
+                                            <a href="#" class="run-button" data-toggle="tooltip" data-placement="top" data-original-title="Run"><span class="glyphicon glyphicon-expand" aria-hidden="true"></span> </a>
+                                            <div class="popover cancel-popover fade bottom in" role="tooltip" style="top: 30px; left: -78px;">
+                                                <div class="arrow" style="left: 50%;">
+                                                </div>
+                                                <div class="popover-content">
+                                                    Cancel running process?
+                                                </div>
+                                                <div class="popover-buttons">
+                                                    <a class="btn btn-default process-cancel-button" href="#" role="button">Yes</a>
+                                                    <a class="btn btn-default popover-dismiss-button pull-right" href="#" role="button">No</a>
+                                                </div>
+                                            </div>
+                                         </li>
                                         <li class="dropdown pull-right">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> <span class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
@@ -106,7 +119,7 @@ setInterval(function() {
                                         <li class="console-tab-head"><a href="#errors" class="error-tab-button" data-toggle="tab">Errors <span class="badge"></span></a></li>
                                         <li class="console-tab-head"><a href="#log" class="log-tab-button" data-toggle="tab">Log <span class="badge"></span></a></li>
                                         <ul class="nav navbar-right">
-                                            <li><a href="#" class="clear-button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </a></li>
+                                            <li><a href="#" class="clear-button" data-toggle="tooltip" data-placement="top" data-original-title="Clear console"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </a></li>
                                         </ul>
                                     </ul>
                                     
@@ -114,17 +127,17 @@ setInterval(function() {
                                 <div class="panel-body">
                                     <div class="tab-content">
                                         <div class="tab-pane fade in active console-tab" id="results">
-                                            <div class="result-tab overflow">
+                                            <div class="result-tab console-tab-content overflow">
                                                 
                                             </div>
                                         </div>
                                         <div class="tab-pane fade console-tab" id="errors">
-                                            <div class="error-tab overflow">
+                                            <div class="error-tab console-tab-content overflow">
                                                 
                                             </div>
                                         </div>
                                         <div class="tab-pane fade console-tab" id="log">
-                                            <div class="log-tab overflow">
+                                            <div class="log-tab console-tab-content overflow">
                                                 
                                             </div>
                                         </div>
@@ -238,8 +251,8 @@ setInterval(function() {
         </div>
         
         <div class="templates">
-            <div class="result-line row">
-                <div class="col-sm-12 result-line-header">
+            <div class="result-line console-line row">
+                <div class="col-sm-12 result-line-header line-header">
                     <div class="col-sm-1">
                         <a href="#"><span class="expand-button glyphicon glyphicon-triangle-right" aria-hidden="true"></a>
                     </div>
@@ -248,7 +261,7 @@ setInterval(function() {
                         <a href="#"><span class="console-close-button glyphicon glyphicon-remove-circle" aria-hidden="true"></a>
                     </div>
                 </div>
-                <div class="col-sm-12 result-line-content">
+                <div class="col-sm-12 result-line-content line-content">
                     <div class="col-sm-1">
                     </div>
                     <div class="col-sm-10 result-line-content-text"><pre></pre></div>
@@ -257,8 +270,8 @@ setInterval(function() {
                 </div>
             </div>
             
-            <div class="error-line row">
-                <div class="col-sm-12 error-line-header bg-danger">
+            <div class="error-line console-line row">
+                <div class="col-sm-12 error-line-header line-header bg-danger">
                     <div class="col-sm-1">
                         <a href="#"><span class="expand-button glyphicon glyphicon-triangle-right" aria-hidden="true"></a>
                     </div>
@@ -267,7 +280,7 @@ setInterval(function() {
                         <a href="#"><span class="console-close-button glyphicon glyphicon-remove-circle" aria-hidden="true"></a>
                     </div>
                 </div>
-                <div class="col-sm-12 error-line-content">
+                <div class="col-sm-12 error-line-content line-content">
                     <div class="col-sm-1">
                     </div>
                     <div class="col-sm-10 error-line-content-text"><pre></pre></div>
@@ -275,110 +288,53 @@ setInterval(function() {
                     </div>
                 </div>
             </div>
+            
+            
+            
         </div>
-        
+        <div class="modal fade" id="mightyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-sm modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">header</h4>
+                    </div>
+                    <div class="modal-body">
+                        content
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default modal-button modal-button-yes">Yes</button>
+                        <button type="button" class="btn btn-default modal-button modal-button-save">Save</button>
+                        <button type="button" class="btn btn-default modal-button modal-button-open">Open</button>
+                        <button type="button" class="btn btn-default modal-button modal-button-no">No</button>
+                        <button type="button" class="btn btn-default modal-button modal-button-dismiss" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <script src="bundel.js"></script>
         
         <script>
-        
-           Exec = require('../lib/node/exec');
-            
+            Exec = require('../lib/node/exec');
             var global = global || window;
             var editor = new global.Editor( 'tab1-editor' );
-             
             var $ = global.jQuery;
             
-            $( '.undo-button' ).addClass( 'disabled' ).click(function() {
-                editor.undo();
-            });
-            $( '.redo-button' ).addClass( 'disabled' ).click(function() {
-                editor.redo();
-            });
             
-            editor.on('change', function() {
-                if (editor.getSession().getUndoManager().hasRedo()) {
-                    $( '.redo-button' ).removeClass( 'disabled' );
-                } else {
-                    $( '.redo-button' ).addClass( 'disabled' );
-                }
-                
-                if (editor.getSession().getUndoManager().hasUndo()) {
-                    $( '.undo-button' ).removeClass( 'disabled' );
-                } else {
-                    $( '.undo-button' ).addClass( 'disabled' );
-                }
-            });
             
-            function createRunEvent() {
-                $( '.run-button' ).click(function() {
-                    $( '.console-tab-head > a > span' ).text('');
-                    $( '.run-button' ).unbind("click");
-                    $( '.run-button' ).removeClass( 'run-button' ).addClass( 'm-progress' );
-                   
-                    Exec(editor, createResult , createError, function(err, childProcess) {
-                        if(childProcess) {
-                            $( '.m-progress' ).click(function () {
-                                console.log("progress");
-                                childProcess.kill('SIGTERM');
-                            });
-                            return;
-                        }
-                        $( '.m-progress' ).removeClass( 'm-progress' ).addClass( 'run-button' );
-                        createRunEvent();
-                        resultFirstLine = 1;
-                    });
-                    
-                    
-                });
-            }
-            createRunEvent();
-            
-            var activeResult;
-            var resultFirstLine = 1;
-            
-            function createResult(output) {
-                if (resultFirstLine == 1 && output != '!resultDone!' && output != '!errorDone!') {
-                    activeResult = $( '.templates .result-line' ).clone().appendTo( '.result-tab' );
-                    $( '.result-line-header-text pre', activeResult).text(output);
-                    $( '.expand-button', activeResult ).click(function() {
-                        if ($( this ).hasClass( 'glyphicon-triangle-right' )) {
-                            $( this ).removeClass( 'glyphicon-triangle-right' ).addClass( 'glyphicon-triangle-bottom' );
-                        } else {
-                            $( this ).removeClass('glyphicon-triangle-bottom').addClass( 'glyphicon-triangle-right' );
-                        }
-                        $( this ).closest( '.result-line' ).children( '.result-line-content' ).slideToggle('fast');
-                    });
-                    $( '.console-close-button', activeResult ).click(function() {
-                        $( this ).parents( '.result-line' ).remove();
-                        $( '.console-tab-head.active > a > span' ).text($( '.console-tab.active > div' ).children().toArray().length);
-                    });
-                    resultFirstLine = 0;
-                } else if(output != '!errorDone!') {
-                    $( '.result-line-content-text pre', activeResult ).text($( '.result-line-content-text pre', activeResult ).text() + output);
-                }
-                $( '.result-tab' ).scrollTop($( '.result-tab' )[0].scrollHeight);
-            }
-            
-            var activeError;
-            function createError(output) {
-                activeError = $( '.templates .error-line' ).clone().appendTo( '.error-tab' );
-                $( '.error-line-header-text pre', activeError).text(output.split('\n')[3]);
-                $( '.expand-button', activeError ).click(function() {
-                    if ($( this ).hasClass( 'glyphicon-triangle-right' )) {
-                        $( this ).removeClass( 'glyphicon-triangle-right' ).addClass( 'glyphicon-triangle-bottom' );
-                    } else {
-                        $( this ).removeClass( 'glyphicon-triangle-bottom' ).addClass( 'glyphicon-triangle-right' );
+            $( '.run-button').click(function(event) {
+                editorPanel.runEvent(event, Exec(editor, createResult , createError, function(err, childProcess) {
+                    if(childProcess) {
+                        $( '.process-cancel-button' ).click(function () {
+                            childProcess.kill( 'SIGTERM' );
+                            $( '.cancel-popover' ).slideUp();
+                        });
+                        return;
                     }
-                    $( this ).closest( '.error-line' ).children( '.error-line-content' ).slideToggle('fast');
-                });
-                $( '.console-close-button', activeError ).click(function() {
-                    $( this ).parents( '.error-line' ).remove();
-                    $( '.console-tab-head.active > a > span' ).text($( '.console-tab.active > div' ).children().toArray().length);
-                });
-                $( '.error-line-content-text pre', activeError ).text($( '.error-line-content-text pre', activeError ).text() + output);
-                $( '.error-tab' ).scrollTop($( '.error-tab' )[0].scrollHeight);
-            }
+                ));
+            });
+            
             
         </script>
     </body>
